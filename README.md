@@ -24,9 +24,9 @@ El objetivo real es reforzar:
 ## Funcionalidades
 
 ### Nivel 1 — Búsqueda simple
-- [ ] Input de texto para ingresar el nombre de una ciudad
-- [ ] Botón "Buscar"
-- [ ] Al buscar, mostrar en pantalla: temperatura actual y descripción del clima
+- [x] Input de texto para ingresar el nombre de una ciudad
+- [x] Botón "Buscar"
+- [x] Al buscar, mostrar en pantalla: temperatura actual y descripción del clima
 - [ ] Manejo de error si la ciudad no existe o falla la conexión (try/catch)
 
 ### Nivel 2 — Búsqueda múltiple en paralelo
