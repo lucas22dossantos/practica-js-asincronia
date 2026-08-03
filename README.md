@@ -24,30 +24,33 @@ El objetivo real es reforzar:
 ## Funcionalidades
 
 ### Nivel 1 — Búsqueda simple
+
 - [x] Input de texto para ingresar el nombre de una ciudad
 - [x] Botón "Buscar"
 - [x] Al buscar, mostrar en pantalla: temperatura actual y descripción del clima
-- [ ] Manejo de error si la ciudad no existe o falla la conexión (try/catch)
+- [x] Manejo de error si la ciudad no existe o falla la conexión (try/catch)
 
 ### Nivel 2 — Búsqueda múltiple en paralelo
+
 - [ ] Permitir ingresar varias ciudades separadas por coma
 - [ ] Pedir el clima de todas las ciudades **en paralelo** usando `Promise.all`
 - [ ] Mostrar comparativamente el tiempo que tarda esto vs. hacerlo uno por uno (secuencial),
       para evidenciar en la práctica la diferencia que se estudió en la teoría
 
 ### Nivel 3 — Extra
+
 - [ ] Historial de búsquedas (en memoria, con un array de JS)
 - [ ] Indicador de carga ("Cargando...") mientras se espera la respuesta de la API
 
 ## Por qué cada parte practica un concepto de asincronía
 
-| Funcionalidad | Concepto que practica |
-|---|---|
-| Fetch de una ciudad | `async`/`await` básico |
-| Manejo de ciudad inexistente | `try`/`catch` |
-| Búsqueda de varias ciudades | `Promise.all` (paralelismo) |
-| Comparación de tiempos | Entender por qué paralelo es más rápido que secuencial |
-| Indicador de carga | Sincronizar estado de UI con una operación asíncrona |
+| Funcionalidad                | Concepto que practica                                  |
+| ---------------------------- | ------------------------------------------------------ |
+| Fetch de una ciudad          | `async`/`await` básico                                 |
+| Manejo de ciudad inexistente | `try`/`catch`                                          |
+| Búsqueda de varias ciudades  | `Promise.all` (paralelismo)                            |
+| Comparación de tiempos       | Entender por qué paralelo es más rápido que secuencial |
+| Indicador de carga           | Sincronizar estado de UI con una operación asíncrona   |
 
 ## Estructura de archivos (a definir mientras se construye)
 
@@ -58,8 +61,3 @@ El objetivo real es reforzar:
 ├── app.js
 └── README.md
 ```
-
-## Estado del proyecto
-
-🚧 En construcción — proyecto de práctica personal, hecho como preparación técnica
-después de una entrevista laboral.
