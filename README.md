@@ -32,8 +32,8 @@ El objetivo real es reforzar:
 
 ### Nivel 2 — Búsqueda múltiple en paralelo
 
-- [ ] Permitir ingresar varias ciudades separadas por coma
-- [ ] Pedir el clima de todas las ciudades **en paralelo** usando `Promise.all`
+- [x] Permitir ingresar varias ciudades separadas por coma
+- [x] Pedir el clima de todas las ciudades **en paralelo** usando `Promise.all`
 - [ ] Mostrar comparativamente el tiempo que tarda esto vs. hacerlo uno por uno (secuencial),
       para evidenciar en la práctica la diferencia que se estudió en la teoría
 
