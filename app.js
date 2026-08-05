@@ -3,15 +3,35 @@ async function buscarClima() {
     const ciudad = document.getElementById("idCiudad").value; //obtenes el valor del imput
     const arrayCiudad = ciudad.split(",").map((item) => item.trim()); // convertimos en un array el valor del input
 
+    // obtenemos el timepo en que inicia
+    const tiempoInicio = Date.now();
+
     const promesas = arrayCiudad.map((nombreCiudad) =>
       obtenerClimaDeUnaCiudad(nombreCiudad),
     );
 
     const resultados = await Promise.all(promesas);
 
-    //mostramos el resultado en la contenedor
-    // let mostrarDatos = `<p>La temperatura en <strong>${coordenadas.name}</strong> es de ${CoorData.current_weather.temperature} °C</p>`;
-    // document.getElementById("resultado").innerHTML = mostrarDatos;
+    // obtenemos el timepo en que finaliza promise.all
+    const tiempoFin = Date.now();
+
+    const tiempo = tiempoFin - tiempoInicio;
+    console.log(tiempo);
+
+    //parte de 2 ontener el timepo de ejecucion pero de manera secuencial para hacer una comparacion
+
+    let tiempoInicioSecuencial = Date.now();
+
+    //recorre con un for
+    for (const nombreCiudad of arrayCiudad) {
+      await obtenerClimaDeUnaCiudad(nombreCiudad);
+    }
+
+    let tiempoFinSecuencial = Date.now();
+
+    const tiempoSecuencial = tiempoFinSecuencial - tiempoInicioSecuencial;
+
+    console.log(`tiempo secuencial: ${tiempoSecuencial}`);
 
     const mostrarDatos = resultados
       .map(

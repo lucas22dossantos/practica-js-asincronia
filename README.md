@@ -34,7 +34,7 @@ El objetivo real es reforzar:
 
 - [x] Permitir ingresar varias ciudades separadas por coma
 - [x] Pedir el clima de todas las ciudades **en paralelo** usando `Promise.all`
-- [ ] Mostrar comparativamente el tiempo que tarda esto vs. hacerlo uno por uno (secuencial),
+- [x] Mostrar comparativamente el tiempo que tarda esto vs. hacerlo uno por uno (secuencial),
       para evidenciar en la práctica la diferencia que se estudió en la teoría
 
 ### Nivel 3 — Extra
